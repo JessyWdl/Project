@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../header.php' ?>
+<?php include __DIR__ . '/.../header.php' ?>
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
     <div class="mt-3">
@@ -25,4 +25,4 @@
     </div>
 </main>
     
-<?php include __DIR__ . '/../footer.php' ?>
+<?php include __DIR__ . '/.../footer.php' ?>

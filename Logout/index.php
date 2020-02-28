@@ -8,7 +8,7 @@ function endSession(){
 
     session_destroy ();
 
-    header ('location: /skeleton/index.php');
+    header ('location: /projetPhP/index.php');
 }
 
 ?>
