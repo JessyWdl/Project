@@ -37,6 +37,7 @@
         }
         else {
           $_SESSION['User_Prenom'] = $tab['Prenom'];
+          $_SESSION['User_Type'] = $tab['Type'];
           header ('Location: ../accueil/index.php');
         }
       }

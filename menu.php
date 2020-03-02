@@ -100,6 +100,14 @@
             ?>
 
             <?php
+              if (isset($_SESSION['User_Type']) && $_SESSION['User_Type']==2) {
+            ?>
+              <li> <a href="../admin/adm_index.php" target="_blank">Administration</a> </li>
+            <?php
+              }
+            ?>
+
+            <?php
               if (isset($_SESSION['User_Prenom'])) {
             ?>
             <li> <a href="../logout/logout.php">Deconnexion</a> </li>
