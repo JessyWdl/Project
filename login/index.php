@@ -1,26 +1,30 @@
 <?php include __DIR__ . '/../header.php' ?>
-
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="mt-3">
-            <div>
-                <h1 class="border-bottom w-100">Veuillez-vous connecter</h1>
-                <form action="/skeleton/login/traitement.php" method="post" enctype="multipart/form-data" class="col-md-4">
-                    <div class="form-group">
-                        <label for="userName">Nom</label>
-                        <input class="form-control" id="userName" name="userName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-block btn-primary" type="submit">Connexion</button>
-                    </div>
-                    <a href="http://localhost/projet_php_jessy/projetPhP/newUser/index.php">Créer un Compte ?</a>
-                </form>
+    <div class="w-full max-w-xs">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                    Username
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
             </div>
-        </div>
-    </main>
-</main>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                    Password
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+                <p class="text-red-500 text-xs italic"></p>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    Sign In
+                </button>
+                <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+                Create Account ?
+                </a>
+            </div>
+        </form>
+    </div>
+<a href="http://localhost/projet_php_jessy/projetPhP/newUser/index.php"></a>
+</form>
 
 <?php include __DIR__ . '/../footer.php' ?>
