@@ -168,7 +168,7 @@
 	  <!--Slide 1-->
 		<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
     <div class="carousel-item absolute opacity-0" style="height:65vh;"> 
-			<div class="block h-full w-full bg-indigo-500 text-darkblue text-5xl text-center">
+			<div class="object-cover h-48 w-full text-darkblue text-5xl text-center">
      
       <img src="2.jpg" class="w-m" alt="">
 
