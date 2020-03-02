@@ -1,8 +1,4 @@
-<?php
-
-  session_start();
-
-?>
+<?php include __DIR__ . '/../header.php' ?>
 
 <div class="mx-auto mt-8 p-4 w-1/2 border border-gray-300 rounded-lg">
 

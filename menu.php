@@ -1,36 +1,4 @@
 <?php session_start() ?>
-<!-- <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-    <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link" href="http://localhost/skeleton/">
-                    Accueil
-                </a>
-            </li>
-        </ul>
-        <ul class="nav flex-column mb-2">
-        <?php if (!isset($_SESSION['user_login'])) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="http://localhost/skeleton/login/index.php">
-                    Login
-                </a>
-            </li>
-            <?php endif?>
-            <?php if (isset($_SESSION['user_login'])) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/skeleton/articles/index.php">
-                    Articles
-                </a>
-            </li>
-            <?php endif?>
-            <?php if (isset($_SESSION['user_login'])) : ?>
-            <li class="nav-item">
-                <a class="nav-link" href="/skeleton/logout/index.php">
-                    Logout
-                </a>
-            </li>
-            <?php endif?> -->
-
 
 <head>
     <style>
@@ -67,8 +35,10 @@
 </head>
 
 <nav class="flex items-center justify-between flex-wrap bg-darkblue-500 p-6">
-    <div class="flex items-center flex-shrink-0 text-darkblue mr-6">
-        <img src="http://localhost/projet_PHP_Jessy/ProjetPhP/logo.png" alt="" width="150" height="">
+    <div class="flex cursor-pointer items-center flex-shrink-0 text-darkblue mr-6">
+        <a href = "http://localhost/projet_PHP_Jessy/ProjetPhP/">
+            <img src="http://localhost/projet_PHP_Jessy/ProjetPhP/logo.png"  alt="" width="150" height="">
+        </a>
         <span class="font-semibold text-xl tracking-tight"></span>
     </div>
     <div class="block lg:hidden">
@@ -87,6 +57,26 @@
             <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-12">
                 Blog
             </a>
+
+            <?php
+              if (isset($_SESSION['User_Prenom'])){
+                echo $_SESSION['User_Prenom'];
+              }
+              else{
+            ?>
+            <a href="http://localhost/projet_PHP_Jessy/ProjetPhP/login/login.php">Se connecter</a>
+            <?php
+              }
+            ?>
+
+            <?php
+              if (isset($_SESSION['User_Prenom'])) {
+            ?>
+            <li> <a href="http://localhost/projet_PHP_Jessy/ProjetPhP/logout/logout.php">Deconnexion</a> </li>
+            <?php
+              }
+            ?>
+
             <div class="flex flex-row-reverse mr-6 my-2">
                 <div class="relative text-gray-600">
                     <input type="search" name="serch" placeholder="Search" class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none">
