@@ -36,8 +36,8 @@
 
 <nav class="flex items-center justify-between flex-wrap bg-darkblue-500 p-6">
     <div class="flex cursor-pointer items-center flex-shrink-0 text-darkblue mr-6">
-        <a href = "http://localhost/projet_PHP_Jessy/ProjetPhP/">
-            <img src="http://localhost/projet_PHP_Jessy/ProjetPhP/logo.png"  alt="" width="150" height="">
+        <a href = "http://localhost/projetphp/Project/">
+            <img src="http://localhost/projetphp/Project/logo.png"  alt="" width="150" height="">
         </a>
         <span class="font-semibold text-xl tracking-tight"></span>
     </div>
@@ -64,7 +64,7 @@
               }
               else{
             ?>
-            <a href="http://localhost/projet_PHP_Jessy/ProjetPhP/login/login.php">Se connecter</a>
+            <a href="http://localhost/projetphp/Project/login/login.php">Se connecter</a>
             <?php
               }
             ?>
@@ -72,7 +72,7 @@
             <?php
               if (isset($_SESSION['User_Prenom'])) {
             ?>
-            <li> <a href="http://localhost/projet_PHP_Jessy/ProjetPhP/logout/logout.php">Deconnexion</a> </li>
+            <li> <a href="http://localhost/projetphp/Project/logout/logout.php">Deconnexion</a> </li>
             <?php
               }
             ?>
