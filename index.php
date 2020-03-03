@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../header.php' ?>
+<?php include __DIR__ . '/header.php' ?>
 
 <body class="bg-darkblue font-sans leading-normal tracking-normal">
   <div class="carousel relative shadow-2xl bg-darkblue">
@@ -163,4 +163,4 @@
   </div>
 </main>
 
-<?php include __DIR__ . '/../footer.php' ?>
+<?php include __DIR__ . '/footer.php' ?>
