@@ -11,7 +11,7 @@
 </div>
 
 <div class="h-8 bg-gray-500 hover:bg-gray-400 pl-1">
-  <i class="fas fa-flask"></i> <a href="#">Recettes</a>
+  <i class="fas fa-flask"></i> <a href="adm_recettes.php">Recettes</a>
 </div>
 
 <div class="h-8 bg-gray-500 hover:bg-gray-400 pl-1">

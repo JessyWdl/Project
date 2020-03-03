@@ -38,6 +38,7 @@
         else {
 
           if ($tab['Archive']==0) {
+            $_SESSION['User_Nom'] = $tab['Nom'];
             $_SESSION['User_Prenom'] = $tab['Prenom'];
             $_SESSION['User_Type'] = $tab['Type'];
             header ('Location: ../accueil/index.php');

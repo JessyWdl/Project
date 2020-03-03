@@ -24,9 +24,7 @@
 
       <!--Barre latérale -->
       <div class="w-64 h-screen bg-gray-500">
-
         <?php include 'sidebar.php'; ?>
-
       </div>
 
       <!-- Corps de page -->
@@ -39,7 +37,7 @@
           </div>
 
           <div class="text-left mt-12 ml-8">
-            <a href="../signin/signin.php"> <i class="fas fa-user-plus"></i> Ajouter </a>
+            <a href="#"> <i class="fas fa-flask"></i> Ajouter </a>
           </div>
 
           <div class="ml-8">
@@ -52,7 +50,7 @@
                   <td class="w-24">Titre</td>
                   <td class="w-24">Description</td>
                   <td class="w-24">Auteur</td>
-                  <td class="w-32">Date Creation</td>
+                  <td class="w-32">Date de création</td>
                   <td class="w-32">Image</td>
                   <td class="w-32">Archivé</td>
                   <td class="w-12">Actions</td>
@@ -64,23 +62,24 @@
                 <?php
 
                   connect_Database();
-                  $req=$dbconnect->prepare("SELECT * FROM users INNER JOIN users_types ON users.type = users_types.type ORDER BY ID ");
+                  $req=$dbconnect->prepare("SELECT * FROM recettes ORDER BY ID ");
                   $req->execute();
                   $tab = $req->fetchAll();
 
-                  foreach ($tab as $user) {
+                  foreach ($tab as $recette) {
                 ?>
 
                 <tr>
-                  <td><?php echo $user['ID']; ?></td>
-                  <td><?php echo $user['Nom']; ?></td>
-                  <td><?php echo $user['Prenom']; ?></td>
-                  <td><?php echo $user['Mail']; ?></td>
-                  <td><?php echo $user['Description']; ?></td>
-                  <td><?php echo $user['Archive']; ?></td>
+                  <td><?php echo $recette['ID']; ?></td>
+                  <td><?php echo $recette['Titre']; ?></td>
+                  <td><?php echo $recette['Description']; ?></td>
+                  <td><?php echo $recette['Auteur']; ?></td>
+                  <td><?php echo $recette['Date_Creation']; ?></td>
+                  <td><?php echo $recette['Image']; ?></td>
+                  <td><?php echo $recette['Archive']; ?></td>
                   <td>
-                    <a href="users_edit.php?ID=<?php echo $user['ID']; ?>"> <i class="far fa-edit text-blue-500"> </i> </a>
-                    <a href="trt/trt_users_archive.php?ID=<?php echo $user['ID']; ?>"> <i class="fas fa-archive text-red-500"></i> </a>
+                    <a href="recette_edit.php?ID=<?php echo $recette['ID']; ?>"> <i class="far fa-edit text-blue-500"> </i> </a>
+                    <a href="trt/trt_recette_archive.php?ID=<?php echo $recette['ID']; ?>"> <i class="fas fa-archive text-red-500"></i> </a>
                   </td>
                 </tr>
 
