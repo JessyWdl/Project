@@ -19,7 +19,7 @@
           <div class="block h-full w-full bg-orange-500 text-darkblue text-5xl text-center"></div>
         </div>
         <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-darkblue rounded-full bg-darkblue hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-        <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-darkblue rounded-full bg-darkblue hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+        <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-darkblue rounded-full bg-darkblue hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
 <!--Slide 3-->
       <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
@@ -66,7 +66,7 @@
       </div>
       <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
         <div class="bg-white rounded-lg overflow-hidden shadow relative">
-          <img class="h-56 w-full object-cover object-center" src="../2.jpg" alt="">          
+          <img class="h-56 w-full object-cover object-center" src="../2.jpg" alt="">
           <div class="p-4 h-auto md:h-40 lg:h-48">
             <a href="#" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
               Woman walking on pathway
@@ -109,7 +109,7 @@
       <div class="block md:flex justify-between md:-mx-2">
         <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
           <div class="bg-white rounded-lg overflow-hidden shadow relative">
-          <img class="h-56 w-full object-cover object-center" src="../5.jpg" alt="">          
+          <img class="h-56 w-full object-cover object-center" src="../5.jpg" alt="">
             <div class="p-4 h-auto md:h-40 lg:h-48">
               <a href="#" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
                 Woman standing under blue sky
@@ -126,7 +126,7 @@
         </div>
         <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
           <div class="bg-white rounded-lg overflow-hidden shadow relative">
-            <img class="h-56 w-full object-cover object-center" src="../6.jpg" alt="">          
+            <img class="h-56 w-full object-cover object-center" src="../6.jpg" alt="">
           <div class="p-4 h-auto md:h-40 lg:h-48">
           <a href="#" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
             Woman walking on pathway
