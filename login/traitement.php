@@ -36,9 +36,17 @@
           header ('Location: login.php');
         }
         else {
-          $_SESSION['User_Prenom'] = $tab['Prenom'];
-          $_SESSION['User_Type'] = $tab['Type'];
-          header ('Location: ../accueil/index.php');
+
+          if ($tab['Archive']==0) {
+            $_SESSION['User_Prenom'] = $tab['Prenom'];
+            $_SESSION['User_Type'] = $tab['Type'];
+            header ('Location: ../accueil/index.php');
+          }
+          else {
+            $_SESSION['err_login'] = "Votre compte a été désactivé";
+            header ('Location: login.php');
+          }
+
         }
       }
     }

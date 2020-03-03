@@ -10,7 +10,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Utilisateurs</title>
+    <title>Admin Recettes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
@@ -35,7 +35,7 @@
         <div class="mx-auto">
 
           <div class="text-center text-3xl">
-            Liste des utilisateurs
+            Liste des recettes
           </div>
 
           <div class="text-left mt-12 ml-8">
@@ -49,10 +49,11 @@
               <thead class="bg-gray-200">
                 <tr>
                   <td class="w-12">ID</td>
-                  <td class="w-24">Nom</td>
-                  <td class="w-24">Prenom</td>
-                  <td class="w-24">Email</td>
-                  <td class="w-32">Type</td>
+                  <td class="w-24">Titre</td>
+                  <td class="w-24">Description</td>
+                  <td class="w-24">Auteur</td>
+                  <td class="w-32">Date Creation</td>
+                  <td class="w-32">Image</td>
                   <td class="w-32">Archivé</td>
                   <td class="w-12">Actions</td>
                 </tr>
