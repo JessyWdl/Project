@@ -1,9 +1,7 @@
+<?php include __DIR__ . '/header.php' ?>
 
 
-           <?php include __DIR__ . '/header.php' ?> <!DOCTYPE html>
-<html>
-
-
+         
 <head>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
 </head>
@@ -41,11 +39,4 @@
 </div>
 </div>
 
-
-
-
-
-
-
-</html>
-<?php include __DIR__ . '/footer.php' ?> <!DOCTYPE html>
+     <?php include __DIR__ . '/footer.php' ?>
