@@ -1,8 +1,11 @@
 <?php
 
-  require'../functions.php';
-
+  require '../functions.php';
   session_start();
+
+  if (!isset($_SESSION['User_Type']) && $_SESSION['User_Type']!=2) {
+    header ('Location: ../index.php');
+  }
 
 ?>
 
