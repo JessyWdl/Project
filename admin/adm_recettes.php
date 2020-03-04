@@ -7,6 +7,11 @@
     header ('Location: ../index.php');
   }
 
+  connect_Database();
+  $req = $dbconnect->prepare("SELECT * FROM recettes where Valide=0");
+  $req->execute();
+  $count = $req->rowCount();
+
 ?>
 
 <!DOCTYPE html>
@@ -39,8 +44,9 @@
             Liste des recettes
           </div>
 
-          <div class="text-left mt-12 ml-8">
-            <a href="../newRecette/add_recette.php"> <i class="fas fa-flask"></i> Ajouter </a>
+          <div class="mt-12 ml-8 mb-3">
+            <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="adm_validation_recette.php"> Recettes à valider (<?php echo $count ?>) </a> </button>
+            <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="../newRecette/add_recette.php"> <i class="fas fa-flask"></i> Ajouter </a> </button>
           </div>
 
           <div class="ml-8">
@@ -65,7 +71,7 @@
                 <?php
 
                   connect_Database();
-                  $req=$dbconnect->prepare("SELECT * FROM recettes ORDER BY ID ");
+                  $req=$dbconnect->prepare("SELECT * FROM recettes WHERE Valide=1 ORDER BY ID ");
                   $req->execute();
                   $tab = $req->fetchAll();
 
