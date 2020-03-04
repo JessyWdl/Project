@@ -1,7 +1,6 @@
 <?php
 
-  require'../functions.php';
-
+  require '../functions.php';
   session_start();
 
 ?>
@@ -10,7 +9,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Admin Recettes</title>
+    <title>Admin Ingrédients</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
@@ -33,11 +32,11 @@
         <div class="mx-auto">
 
           <div class="text-center text-3xl">
-            Liste des recettes
+            Liste des ingrédients
           </div>
 
           <div class="text-left mt-12 ml-8">
-            <a href="../newRecette/add_recette.php"> <i class="fas fa-flask"></i> Ajouter </a>
+            <a href="add_ingredients.php"> <i class="fas fa-lemon"></i> Ajouter </a>
           </div>
 
           <div class="ml-8">
@@ -47,12 +46,9 @@
               <thead class="bg-gray-200">
                 <tr>
                   <td class="w-12">ID</td>
-                  <td class="w-24">Titre</td>
-                  <td class="w-24">Description</td>
-                  <td class="w-24">Auteur</td>
-                  <td class="w-32">Date de création</td>
-                  <td class="w-32">Image</td>
-                  <td class="w-32">Archivé</td>
+                  <td class="w-32">Nom</td>
+                  <td class="w-24">Type</td>
+                  <td class="w-24">Archive</td>
                   <td class="w-12">Actions</td>
                 </tr>
               </thead>
@@ -62,24 +58,21 @@
                 <?php
 
                   connect_Database();
-                  $req=$dbconnect->prepare("SELECT * FROM recettes ORDER BY ID ");
+                  $req=$dbconnect->prepare("SELECT i.ID, i.Nom, it.Description, i.Archive FROM ingredients i INNER JOIN ingredients_types it on it.type = i.type ORDER BY i.ID ");
                   $req->execute();
                   $tab = $req->fetchAll();
 
-                  foreach ($tab as $recette) {
+                  foreach ($tab as $ingredient) {
                 ?>
 
                 <tr>
-                  <td><?php echo $recette['ID']; ?></td>
-                  <td><?php echo $recette['Titre']; ?></td>
-                  <td><?php echo $recette['Description']; ?></td>
-                  <td><?php echo $recette['Auteur']; ?></td>
-                  <td><?php echo $recette['Date_Creation']; ?></td>
-                  <td><?php echo $recette['Image']; ?></td>
-                  <td><?php echo $recette['Archive']; ?></td>
+                  <td><?php echo $ingredient['ID']; ?></td>
+                  <td><?php echo $ingredient['Nom']; ?></td>
+                  <td><?php echo $ingredient['Description']; ?></td>
+                  <td><?php echo $ingredient['Archive']; ?></td>
                   <td>
-                    <a href="recette_edit.php?ID=<?php echo $recette['ID']; ?>"> <i class="far fa-edit text-blue-500"> </i> </a>
-                    <a href="trt/trt_recette_archive.php?ID=<?php echo $recette['ID']; ?>"> <i class="fas fa-archive text-red-500"></i> </a>
+                    <a href="ingredient_edit.php?ID=<?php echo $ingredient['ID']; ?>"> <i class="far fa-edit text-blue-500"> </i> </a>
+                    <a href="trt/trt_ingredient_archive.php?ID=<?php echo $ingredient['ID']; ?>"> <i class="fas fa-archive text-red-500"></i> </a>
                   </td>
                 </tr>
 

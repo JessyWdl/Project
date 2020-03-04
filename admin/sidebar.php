@@ -15,5 +15,9 @@
 </div>
 
 <div class="h-8 bg-gray-500 hover:bg-gray-400 pl-1">
-  <i class="fas fa-lemon"></i> <a href="#">Ingrédients</a>
+  <i class="fas fa-lemon"></i> <a href="adm_ingredients.php">Ingrédients</a>
+</div>
+
+<div class="h-8 bg-gray-500 hover:bg-gray-400 pl-1">
+  <i class="fas fa-lemon"></i> <a href="adm_types_ingredients.php">Types d'ingrédients</a>
 </div>
