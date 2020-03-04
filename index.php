@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../header.php' ?>
+<?php include __DIR__ . '/header.php' ?>
 
 <body class="bg-darkblue font-sans leading-normal tracking-normal">
   <div class="carousel relative shadow-2xl bg-darkblue">
@@ -6,8 +6,8 @@
     <!--Slide 1-->
       <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
       <div class="carousel-item absolute opacity-0" style="height:65vh;">
-        <div class="block h-full w-full bg-indigo-500 text-darkblue text-5xl text-center">
-          <img src="2.jpg" class="w-m" alt="">
+        <div class="block h-full w-full text-darkblue text-5xl text-center">
+          <img src="2.jpg" class="h-full w-full object-cover" alt="">
         </div>
       </div>
       <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-darkblue rounded-full bg-darkblue hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
@@ -163,4 +163,4 @@
   </div>
 </main>
 
-<?php include __DIR__ . '/../footer.php' ?>
+<?php include __DIR__ . '/footer.php' ?>

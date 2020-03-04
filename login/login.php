@@ -1,5 +1,5 @@
 <?php include __DIR__ . '/../header.php' ?>
-    <div class="w-full max-w-xs">
+    <div class="w-full mx-auto max-w-xs">
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
@@ -24,6 +24,4 @@
             </div>
         </form>
     </div>
-<a href="http://localhost/projet_php_jessy/projetPhP/newUser/index.php"></a>
-
 <?php include __DIR__ . '/../footer.php' ?>

@@ -1,44 +1,48 @@
 <?php include __DIR__ . '/../header.php' ?>
 
-<div class="mx-auto mt-8 p-4 w-1/2 border border-gray-300 rounded-lg">
-
-      <form class="" action="traitement.php" method="post">
-
-        <div class="">
-          <label for="nom">Nom :</label>
-          <input type="text" name="nom" value="" class="border border-gray-400">
-
-          <label for="prenom">Prénom :</label>
-          <input type="text" name="prenom" value="" class="border border-gray-400">
-        </div>
-
-        <div class="mt-3">
-          <label for="mail">Email :</label>
-          <input type="text" name="mail" value="" class="border border-gray-400">
-        </div>
-
-        <div class="mt-3">
-          <label for="pass">Mot de passe :</label>
-          <input type="password" name="pass" value="" class="border border-gray-400">
-
-          <label for="conf_pass">Confirmation :</label>
-          <input type="password" name="conf_pass" value="" class="border border-gray-400">
-        </div>
-
-        <div class="text-red-500 mt-3">
-          <?php
-            if (isset($_SESSION['err_signin'])) {
-              echo $_SESSION['err_signin'];
-              unset($_SESSION['err_signin']);
-            }
-          ?>
-        </div>
-
-        <div class="mt-8 text-center">
-          <button type="submit" name="button" class="bg-gray-200 border border-gray-400 rounded-lg p-1">Valider</button>
-        </div>
-
-
-      </form>
-
+<div class="w-full mx-auto max-w-xs">
+  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="traitement.php" method="post">
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="nom">
+        Nom :
+      </label>  
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text"name="nom" value="">
     </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="prenom">
+        Prénom :
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="prenom" value="">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="mail">
+        Email :
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="mail" value="">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="pass">
+        Mot de passe :
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="password" name="pass" value="">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="conf_pass">
+        Confirmation :
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="password" name="conf_pass" value="">
+    </div>
+    <div class="text-red-500 mt-3">
+      <?php
+        if (isset($_SESSION['err_signin'])) {
+          echo $_SESSION['err_signin'];
+          unset($_SESSION['err_signin']);
+        }
+      ?>
+    </div>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" name="button">
+        Sign In
+    </button>
+  </form>
+</div>
+<?php include __DIR__ . '/../footer.php' ?>
