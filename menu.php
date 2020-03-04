@@ -64,7 +64,15 @@
               }
               else{
             ?>
-            <a href="http://localhost/projetphp/Project/login/login.php">Se connecter</a>
+            <a href="../login/login.php">Se connecter</a>
+            <?php
+              }
+            ?>
+
+            <?php
+              if (isset($_SESSION['User_Type']) && $_SESSION['User_Type']==2) {
+            ?>
+              <li> <a href="../admin/adm_index.php" target="_blank">Administration</a> </li>
             <?php
               }
             ?>
@@ -72,7 +80,7 @@
             <?php
               if (isset($_SESSION['User_Prenom'])) {
             ?>
-            <li> <a href="http://localhost/projetphp/Project/logout/logout.php">Deconnexion</a> </li>
+            <li> <a href="../logout/logout.php">Deconnexion</a> </li>
             <?php
               }
             ?>
@@ -87,7 +95,7 @@
                     </button>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 </nav>
 <!-- ---------------------------------------------------------------------------- -->

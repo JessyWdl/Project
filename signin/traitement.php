@@ -39,10 +39,9 @@
           $mdpcrypt = md5($pass);
 
           //On intègre les données dans la base, on log automatique le nouvel utilisateur
-          $req = $dbconnect -> prepare("INSERT INTO users (Nom,Prenom,Mail,Pass) VALUES ('$nom', '$prenom', '$mail', '$mdpcrypt')");
+          $req = $dbconnect -> prepare("INSERT INTO users (Nom,Prenom,Mail,Pass,Date_Inscription) VALUES ('$nom', '$prenom', '$mail', '$mdpcrypt', now() )");
           $req -> execute();
 
-          $_SESSION['User_Prenom'] = $prenom;
           header ('Location: ../accueil/index.php');
         }
       }
