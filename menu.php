@@ -6,9 +6,7 @@
 
 <nav class="flex items-center justify-between flex-wrap bg-darkblue-500 p-6">
     <div class="flex cursor-pointer items-center flex-shrink-0 text-darkblue mr-6">
-        <a href = "http://localhost/projetphp/Project/">
-            <img src="http://localhost/projetphp/Project/logo.png"  alt="" width="150" height="">
-        </a>
+        
         <span class="font-semibold text-xl tracking-tight"></span>
     </div>
     <div class="block lg:hidden">
@@ -20,11 +18,9 @@
    
     <div class="w-full block flex lg:flex lg:items-center lg:w-auto">
         <div class="text-lg lg:flex">
-            <a href="http://localhost/projetphp/Project/pagerecettes.php" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-4">
-                Recettes
-            </a>     
+              
             <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-4">
-                Ingrédients
+                
             </a>
        
 
@@ -70,3 +66,75 @@
     </div>
 </nav>
 <!-- ---------------------------------------------------------------------------- -->
+<body class="bg-white font-sans leading-normal tracking-normal">
+
+	<nav class="flex items-center justify-between flex-wrap bg-white p-6 fixed w-full z-10 top-0">
+		<div class="flex items-center flex-shrink-0 text-white mr-6">
+			<a class="text-white no-underline hover:text-white hover:no-underline" href="http://localhost/projetphp/Project/">    
+        <span class="text-2xl pl-2"><i class="em em-grinning"></i>
+        <img src="http://localhost/projetphp/Project/logo.png"  alt="" width="150" height="">
+      </span>
+			</a>
+		</div>
+
+		<div class="block lg:hidden">
+			<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+			</button>
+		</div>
+
+		<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+			<ul class="list-reset lg:flex justify-end flex-1 items-center">
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-black no-underline" href="http://localhost/projetphp/Project/pagerecettes.php">Recettes</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block text-black no-underline hover:text-blue-500 hover:text-underline py-2 px-4" href="#">Ingrédients</a>
+        </li>
+        <?php
+              if (isset($_SESSION['User_Prenom'])){
+                echo $_SESSION['User_Prenom'];
+              }
+              else{
+            ?>
+            <div>                          
+                <button class="modal-open bg-transparent border border-gray-500 hover:border-blue-500 text-gray-500 hover:text-blue-500 font-bold py-2 px-4 rounded-full">Sign in</button>
+            <?php
+              }
+            ?>
+        <?php
+            if (isset($_SESSION['User_Type']) && $_SESSION['User_Type']==2) {
+          ?>
+				<li class="mr-3">
+					<a class="inline-block text-black no-underline hover:text-black hover:text-underline py-2 px-4" href="../admin/adm_index.php">Administration</a>
+        </li>
+        <?php
+              }
+            ?>
+        <?php
+          if (isset($_SESSION['User_Prenom'])) {
+        ?>
+				<li class="mr-3">
+					<a class="inline-block text-black no-underline hover:text-black hover:text-underline py-2 px-4" href="../logout/logout.php">Deconnexion</a>
+        </li>
+        <?php
+              }
+            ?>
+			</ul>
+		</div>
+  </nav>
+            
+
+	<!--Container-->
+	<div class="container shadow-lg mx-auto bg-white mt-24 md:mt-18">
+
+	</div>
+
+	<script>
+		//Javascript to toggle the menu
+		document.getElementById('nav-toggle').onclick = function(){
+			document.getElementById("nav-content").classList.toggle("hidden");
+		}
+	</script>
+
+</body>
