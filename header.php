@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Cours PHP - CESI</title>
+    <title>LEON</title>
 
     <!-- tailwind core CSS -->
     <link rel="stylesheet" href="http://localhost/projetphp/Project/add-on/Custom.css" />

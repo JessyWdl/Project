@@ -51,7 +51,7 @@
           <div class="bg-white rounded-lg overflow-hidden shadow relative">
             <img class="h-56 w-full object-cover object-center" src="3.jpg" alt="">          
             <div class="p-4 h-auto md:h-40 lg:h-48">
-            <a href="http://localhost/projetphp/Project/ficherecette.php" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+            <a href="" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
               Le chef vous propose: Soupe 
             </a>
                         <div class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
