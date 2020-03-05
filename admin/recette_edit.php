@@ -14,6 +14,10 @@
   $req->execute();
   $tab = $req->fetch();
 
+  $req2 = $dbconnect->prepare("SELECT * FROM recettes_categories ");
+  $req2->execute();
+  $tab2 = $req2->fetchAll();
+
 
 
 ?>
@@ -52,7 +56,7 @@
 
           <div class="ml-8 mt-8">
 
-            <form enctype="multipart/form-data" class="border border-gray-300 rounded-lg p-3" action="traitement.php" method="post">
+            <form enctype="multipart/form-data" class="border border-gray-300 rounded-lg p-3" action="trt/trt_recette_edit.php" method="post">
 
               <div class="mb-3">
                 <label for="titre">Titre :</label>
@@ -65,7 +69,21 @@
               </div>
 
               <div class="mb-3">
-                <input type="file" name="image" value="">
+                <label for="categorie">Catégorie :</label>
+                <select class="" name="categorie">
+                  <?php
+                    foreach ($tab2 as $categorie) {
+                  ?>
+                  <option <?php echo $tab['Categorie']==$categorie['Categorie'] ? 'selected' : ''; ?> value=" <?php echo $categorie['Categorie']; ?> "> <?php echo $categorie['Description']; ?> </option>
+                  <?php
+                    }
+                  ?>
+                </select>
+              </div>
+
+
+              <div class="mb-3">
+                <img src="../img/recettes/<?php echo $tab['Image']; ?>" class="w-1/2" alt="">
               </div>
 
               <div class="text-red-500">
@@ -78,8 +96,21 @@
               </div>
 
               <div class="">
-                <button class="border border-gray-300 p-1 rounded-lg" type="submit" name="button">Ajouter</button>
+                <?php
+                  if ($tab['Valide']==1) {
+                ?>
+                <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="submit" name="button">Enregistrer</button>
+                <?php
+                  }
+
+                  if ($tab['Valide']==0) {
+                ?>
+                  <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="valider_recette.php?ID=<?php echo $Recette_Id; ?>">Valider</a> </button>
+                <?PHP
+                  }
+                ?>
               </div>
+
 
             </form>
 
