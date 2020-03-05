@@ -46,18 +46,48 @@
             <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
         </button>
     </div>
+
+   
     <div class="w-full block flex lg:flex lg:items-center lg:w-auto">
         <div class="text-lg lg:flex">
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-4">
+            <a href="http://localhost/projetphp/Project/pagerecettes.php" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-4">
                 Recettes
-            </a>
+            </a>     
             <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-4">
                 Ingrédients
             </a>
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-12">
+       
+
+            <?php
+              if (isset($_SESSION['User_Prenom'])){
+                echo $_SESSION['User_Prenom'];
+              }
+              else{
+            ?>
+              <a href="http://localhost/projetphp/Project/login/login.php" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-12">
                 S'identifier
             </a>
-                        <div class="flex flex-row-reverse ">
+            <?php
+              }
+            ?>
+
+            <?php
+              if (isset($_SESSION['User_Type']) && $_SESSION['User_Type']==2) {
+            ?>
+              <li> <a href="../admin/adm_index.php" target="_blank">Administration</a> </li>
+            <?php
+              }
+            ?>
+
+            <?php
+              if (isset($_SESSION['User_Prenom'])) {
+            ?>
+            <li> <a href="../logout/logout.php">Deconnexion</a> </li>
+            <?php
+              }
+            ?>
+
+            <div class="flex flex-row-reverse mr-6 my-2">
                 <div class="relative text-gray-600">
                     <input type="search" name="search" placeholder="Recherche..." class="bg-white  rounded-full text-lg focus:outline-none">
                     <button type="submit" class="absolute right-0 top-0 ">
@@ -67,7 +97,7 @@
                     </button>
                 </div>
             </div>
-        </div> 
+        </div>
     </div>
 </nav>
 <!-- ---------------------------------------------------------------------------- -->

@@ -1,5 +1,6 @@
 <nav class="flex items-center justify-between flex-wrap bg-darkblue-500 p-6">
     <div class="flex items-center flex-shrink-0 text-darkblue mr-6">
+    <a href = "http://localhost/projetphp/Project/">
         <img src="http://localhost/projetphp/project/logo.png" alt="" width="150" height="">
         <span class="font-semibold text-xl tracking-tight"></span>
     </div>
@@ -19,6 +20,7 @@
             <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-12">
                 Notes légales
             </a>
+                
             </div>
         </div> 
     </div>
