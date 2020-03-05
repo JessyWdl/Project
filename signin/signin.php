@@ -1,18 +1,20 @@
 <?php include __DIR__ . '/../header.php' ?>
 
-<div class="w-full mx-auto max-w-xs">
+<div class="w-full mx-auto max-w-lg">
   <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="traitement.php" method="post">
-    <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="nom">
-        Nom :
-      </label>  
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text"name="nom" value="">
-    </div>
-    <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="prenom">
-        Prénom :
-      </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="prenom" value="">
+    <div class="flex" >
+      <div class="mr-5 mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="nom">
+          Nom :
+        </label>  
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text"name="nom" value="">
+      </div>
+      <div class="ml-5 mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="prenom">
+          Prénom :
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="text" name="prenom" value="">
+      </div>
     </div>
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="mail">
