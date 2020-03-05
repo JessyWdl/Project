@@ -24,10 +24,10 @@
 		<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
 			<ul class="list-reset lg:flex justify-end flex-1 items-center">
       <li class="mr-3">
-        <a class="inline-block py-2 px-4 text-black no-underline" href="http://localhost/projetphp/Project/pagerecettes.php">Recettes</a>
+        <a class="inline-block py-1 px-4 text-black no-underline hover:text-blue-500 hover:text-underline" href="http://localhost/projetphp/Project/pagerecettes.php">Recettes</a>
       </li>
       <li class="mr-3">
-        <a class="inline-block text-black no-underline hover:text-blue-500 hover:text-underline py-2 px-4" href="#">Ingrédients</a>
+        <a class="inline-block py-1 px-4 text-black no-underline hover:text-blue-500 hover:text-underline" href="#">Ingrédients</a>
       </li>
       <li class="mr-3">
         <div class="flex flex-row-reverse mr-6 my-2">
@@ -56,7 +56,7 @@
           if (isset($_SESSION['User_Type']) && $_SESSION['User_Type']==2) {
         ?>
       <li class="mr-3">
-        <a class="inline-block text-black no-underline hover:text-black hover:text-underline py-2 px-4" href="../admin/adm_index.php">Administration</a>
+        <a class="inline-block text-black no-underline hover:text-blue-500 hover:text-underline py-2 px-4" href="../admin/adm_index.php">Administration</a>
       </li>
       <?php
             }
@@ -65,7 +65,7 @@
         if (isset($_SESSION['User_Prenom'])) {
       ?>
       <li class="mr-3">
-        <a class="inline-block text-black no-underline hover:text-black hover:text-underline py-2 px-4" href="../logout/logout.php">Deconnexion</a>
+        <a class="inline-block text-black no-underline hover:text-blue-500 hover:text-underline py-2 px-4" href="../logout/logout.php">Deconnexion</a>
       </li>
       <?php
             }
