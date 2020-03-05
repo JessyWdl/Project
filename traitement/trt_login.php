@@ -12,7 +12,7 @@
     //On vérifie qu'aucun champ saisi n'est vide:
     if (empty($mail) || empty($pass)) {
       $_SESSION['err_login'] = "Merci de renseigner tous les champs.";
-      header ('Location: ../footer.php');
+      header ('Location: ../erreur.php');
     }
     else {
       //On vérifie en base si le mail renseigné existe :
@@ -23,7 +23,7 @@
 
       if ($count==0) {
         $_SESSION['err_login'] = "L'adresse mail renseignée n'est pas enregistrée dans notre base.";
-        header ('Location: ../footer.php');
+        header ('Location: ../erreur.php');
       }
       else {
         //On vérifie la concordance mail / mdp
@@ -33,7 +33,7 @@
 
         if ($tab['Pass'] != $pass) {
           $_SESSION['err_login'] = "Le mot de passe saisie n'est pas correct";
-          header ('Location: ../footer.php');
+          header ('Location: ../erreur.php');
         }
         else {
 
@@ -45,7 +45,7 @@
           }
           else {
             $_SESSION['err_login'] = "Votre compte a été désactivé";
-            header ('Location: ../footer.php');
+            header ('Location: ../erreur.php');
           }
 
         }

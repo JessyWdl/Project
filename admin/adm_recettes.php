@@ -45,7 +45,7 @@
           </div>
 
           <div class="mt-12 ml-8 mb-3">
-            <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="adm_validation_recette.php"> Recettes à valider (<?php echo $count ?>) </a> </button>
+            <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="adm_recettes_nonvalides.php"> Recettes à valider (<?php echo $count ?>) </a> </button>
             <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="../newRecette/add_recette.php"> <i class="fas fa-flask"></i> Ajouter </a> </button>
           </div>
 

@@ -1,4 +1,8 @@
-<?php session_start() ?>
+<?php
+
+  session_start()
+
+?>
 
 <head>
 
@@ -41,7 +45,7 @@
             ?>
 
             <?php
-              if (isset($_SESSION['User_Type']) && $_SESSION['User_Type']==2) {
+              if (isset($_SESSION['User_Type']) && $_SESSION['User_Type']>=1) {
             ?>
               <li> <a href="admin/adm_index.php" target="_blank">Administration</a> </li>
             <?php
