@@ -9,7 +9,7 @@
     <title>Cours PHP - CESI</title>
 
     <!-- tailwind core CSS -->
-    <link rel="stylesheet" href="http://localhost/projet_PHP_Jessy/ProjetPhP/css/Admin.css" />
+    <link rel="stylesheet" href="http://localhost/projetphp/Project/add-on/Custom.css" />
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <?php include __DIR__ . '/menu.php' ?>

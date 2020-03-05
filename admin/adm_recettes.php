@@ -1,8 +1,11 @@
 <?php
 
-  require'../functions.php';
-
+  require '../functions.php';
   session_start();
+
+  if (!isset($_SESSION['User_Type']) && $_SESSION['User_Type']!=2) {
+    header ('Location: ../index.php');
+  }
 
 ?>
 
@@ -37,7 +40,7 @@
           </div>
 
           <div class="text-left mt-12 ml-8">
-            <a href="#"> <i class="fas fa-flask"></i> Ajouter </a>
+            <a href="../newRecette/add_recette.php"> <i class="fas fa-flask"></i> Ajouter </a>
           </div>
 
           <div class="ml-8">
