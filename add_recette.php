@@ -1,6 +1,6 @@
 
 
-<?php include __DIR__ . '/../header.php' ?>
+<?php include __DIR__ . '/header.php' ?>
 
   <div class="mx-auto w-full h-full">
 
@@ -14,7 +14,7 @@
     <!-- FORMULAIRE -->
     <div class="mt-12">
 
-      <form enctype="multipart/form-data" class="border border-gray-300 rounded-lg p-3" action="traitement.php" method="post">
+      <form enctype="multipart/form-data" class="border border-gray-300 rounded-lg p-3" action="traitement/trt_add_recette.php" method="post">
 
         <div class="mb-3">
           <label for="titre">Titre :</label>
@@ -52,4 +52,4 @@
 
   </div>
 
-<?php include __DIR__ . '/../footer.php' ?>
+<?php include __DIR__ . '/footer.php' ?>

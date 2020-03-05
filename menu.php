@@ -6,8 +6,8 @@
 
 <nav class="flex items-center justify-between flex-wrap bg-darkblue-500 p-6">
     <div class="flex cursor-pointer items-center flex-shrink-0 text-darkblue mr-6">
-        <a href = "http://localhost/projetphp/Project/">
-            <img src="http://localhost/projetphp/Project/logo.png"  alt="" width="150" height="">
+        <a href = "index.php">
+            <img src="logo.png"  alt="" width="150" height="">
         </a>
         <span class="font-semibold text-xl tracking-tight"></span>
     </div>
@@ -17,16 +17,16 @@
         </button>
     </div>
 
-   
+
     <div class="w-full block flex lg:flex lg:items-center lg:w-auto">
         <div class="text-lg lg:flex">
-            <a href="http://localhost/projetphp/Project/pagerecettes.php" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-4">
+            <a href="pagerecettes.php" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-4">
                 Recettes
-            </a>     
+            </a>
             <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black-200 hover:text-darkblue mr-4">
                 Ingrédients
             </a>
-       
+
 
             <?php
               if (isset($_SESSION['User_Prenom'])){
@@ -34,7 +34,7 @@
               }
               else{
             ?>
-            <div>                          
+            <div>
                 <button class="modal-open bg-transparent border border-gray-500 hover:border-blue-500 text-gray-500 hover:text-blue-500 font-bold py-2 px-4 rounded-full">Sign in</button>
             <?php
               }
@@ -43,7 +43,7 @@
             <?php
               if (isset($_SESSION['User_Type']) && $_SESSION['User_Type']==2) {
             ?>
-              <li> <a href="../admin/adm_index.php" target="_blank">Administration</a> </li>
+              <li> <a href="admin/adm_index.php" target="_blank">Administration</a> </li>
             <?php
               }
             ?>
@@ -51,7 +51,7 @@
             <?php
               if (isset($_SESSION['User_Prenom'])) {
             ?>
-            <li> <a href="../logout/logout.php">Deconnexion</a> </li>
+            <li> <a href="logout.php">Deconnexion</a> </li>
             <?php
               }
             ?>

@@ -41,7 +41,7 @@
             $_SESSION['User_Nom'] = $tab['Nom'];
             $_SESSION['User_Prenom'] = $tab['Prenom'];
             $_SESSION['User_Type'] = $tab['Type'];
-            header ('Location: ../footer.php');
+            header ('Location: ../index.php');
           }
           else {
             $_SESSION['err_login'] = "Votre compte a été désactivé";

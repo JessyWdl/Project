@@ -1,7 +1,7 @@
 <nav class="flex items-center justify-between flex-wrap bg-darkblue-500 p-6">
     <div class="flex items-center flex-shrink-0 text-darkblue mr-6">
         <a href = "http://localhost/projetphp/Project/">
-            <img src="http://localhost/projetphp/project/logo.png" alt="" width="150" height="">
+            <img src="logo.png" alt="" width="150" height="">
             <span class="font-semibold text-xl tracking-tight"></span>
         </a>
     </div>
@@ -48,7 +48,7 @@
             </div>
         <!--Body-->
             <div class="w-full max-w-xs mx-auto">
-                <form action="login/traitement.php" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <form action="traitement/trt_login.php" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="mail">
                             Adresse Mail :
@@ -87,7 +87,7 @@
 <!-- ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://localhost/projetphp/Project/add-on/Script.js"></script>
+    <script type="text/javascript" src="Add-on/Script.js"></script>
     <!-- Intégration du CKEditor -->
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 </body>
