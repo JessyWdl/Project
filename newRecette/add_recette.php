@@ -1,3 +1,5 @@
+
+
 <?php include __DIR__ . '/../header.php' ?>
 
   <div class="mx-auto w-full h-full">
@@ -22,6 +24,9 @@
         <div class="mb-3">
           <label for="description">Description :</label>
           <textarea class="border border-gray-300" name="description" rows="8" cols="80"></textarea>
+          <script>
+            CKEDITOR.replace('description');
+          </script>
         </div>
 
         <div class="mb-3">
