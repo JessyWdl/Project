@@ -84,7 +84,7 @@
 
 
 <div class="py-10">
-<div class="px-32">
+<div class="sm:px-4 lg:px-32">
 <div class ="font-bold text-4xl">
 <h1> Les recettes du moment</h1></div>
        <div class="block md:flex justify-between md:-mx-2">
@@ -147,7 +147,7 @@
 
 </br></br></br></br>
 <main class="py-10">
-<div class="px-32">
+<div class="sm:px-4 lg:px-32">
 <div class ="font-bold text-4xl">
 <h1> Les recettes de saison</h1></div>
        <div class="block md:flex justify-between md:-mx-2">
@@ -205,7 +205,4 @@
     </div>
   </div>
 </main>
-
-
-
 <?php include __DIR__ . '/footer.php' ?>
