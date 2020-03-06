@@ -3,14 +3,14 @@
   session_start()
 
 ?>
-<!-- ---------------------------------------------------------------------------- -->
+
 <body class="bg-gray-200 font-sans leading-normal tracking-normal">
 
 	<nav class="flex items-center justify-between flex-wrap bg-white p-1 fixed w-full z-10 top-0">
 		<div class="flex items-center flex-shrink-0 text-white mr-6">
 			<a class="text-white no-underline hover:text-white hover:no-underline" href="http://localhost/projetphp/Project/">    
         <span class=""><i class="em em-grinning"></i>
-        <img src="http://localhost/projetphp/Project/logo.png"  alt="150" width="150" height="25">
+        <img src="logo.png"  alt="150" width="150" height="25">
       </span>
 			</a>
 		</div>
@@ -83,7 +83,7 @@
 	<script>
 		//Javascript to toggle the menu
 		document.getElementById('nav-toggle').onclick = function(){
-			document.getElementById("nav-content").classList.toggle("hidden");
+		document.getElementById("nav-content").classList.toggle("hidden");
 		}
 	</script>
 
