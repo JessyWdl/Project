@@ -44,8 +44,12 @@
             Liste des recettes à valider
           </div>
 
+          <div class="mt-12 ml-8 mb-3">
+            <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="adm_recettes.php">Retour aux recettes</a> </button>
+          </div>
 
-          <div class="ml-8 mt-12">
+
+          <div class="ml-8 ">
 
             <table class="border border-gray-400">
 

@@ -8,7 +8,7 @@
 
 	<nav class="flex items-center justify-between flex-wrap bg-white p-1 w-full z-10 top-0">
 		<div class="flex items-center flex-shrink-0 text-white mr-6">
-			<a class="text-white no-underline hover:text-white hover:no-underline" href="http://localhost/projetphp/Project/">    
+			<a class="text-white no-underline hover:text-white hover:no-underline" href="index.php">
         <span class=""><i class="em em-grinning"></i>
         <img src="logo.png"  alt="150" width="150" height="25">
       </span>
@@ -24,7 +24,7 @@
 		<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
 			<ul class="list-reset lg:flex justify-end flex-1 items-center">
       <li class="mr-3">
-        <a class="inline-block py-1 px-4 text-black no-underline hover:text-blue-500 hover:text-underline" href="http://localhost/projetphp/Project/pagerecettes.php">Recettes</a>
+        <a class="inline-block py-1 px-4 text-black no-underline hover:text-blue-500 hover:text-underline" href="recettes.php">Recettes</a>
       </li>
       <li class="mr-3">
         <div class="flex flex-row mr-6 my-2">
@@ -53,7 +53,7 @@
           if (isset($_SESSION['User_Type']) && $_SESSION['User_Type']==2) {
         ?>
       <li class="mr-3">
-        <a class="inline-block text-black no-underline hover:text-blue-500 hover:text-underline py-2 px-4" href="../admin/adm_index.php">Administration</a>
+        <a class="inline-block text-black no-underline hover:text-blue-500 hover:text-underline py-2 px-4" href="admin/adm_index.php">Administration</a>
       </li>
       <?php
             }
@@ -62,7 +62,7 @@
         if (isset($_SESSION['User_Prenom'])) {
       ?>
       <li class="mr-3">
-        <a class="inline-block text-black no-underline hover:text-blue-500 hover:text-underline py-2 px-4" href="../logout/logout.php">Deconnexion</a>
+        <a class="inline-block text-black no-underline hover:text-blue-500 hover:text-underline py-2 px-4" href="logout.php">Deconnexion</a>
       </li>
       <?php
             }
@@ -70,7 +70,7 @@
     </ul>
   </div>
 </nav>
-            
+
 
 	<!--Container-->
 	<div class="container shadow-lg mx-auto bg-white mt-24 md:mt-18">

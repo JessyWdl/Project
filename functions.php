@@ -14,7 +14,7 @@
     $host_name = 'localhost';
     $database = 'projet_web';
     $user_name = 'root';
-    $password = 'root';
+    $password = '';
     $dbconnect = null;
 
     try {

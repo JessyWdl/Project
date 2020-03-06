@@ -46,7 +46,7 @@
 
           <div class="mt-12 ml-8 mb-3">
             <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="adm_recettes_nonvalides.php"> Recettes à valider (<?php echo $count ?>) </a> </button>
-            <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="../newRecette/add_recette.php"> <i class="fas fa-flask"></i> Ajouter </a> </button>
+            <button class="border border-gray-300 p-1 rounded-lg bg-gray-300 hover:bg-gray-200" type="button" name="button"> <a href="../add_recette.php"> <i class="fas fa-flask"></i> Ajouter </a> </button>
           </div>
 
           <div class="ml-8">
@@ -59,8 +59,7 @@
                   <td class="w-24">Titre</td>
                   <td class="w-24">Description</td>
                   <td class="w-24">Auteur</td>
-                  <td class="w-32">Date de création</td>
-                  <td class="w-32">Image</td>
+                  <td class="w-32">Catégorie</td>
                   <td class="w-32">Archivé</td>
                   <td class="w-12">Actions</td>
                 </tr>
@@ -71,7 +70,9 @@
                 <?php
 
                   connect_Database();
-                  $req=$dbconnect->prepare("SELECT * FROM recettes WHERE Valide=1 ORDER BY ID ");
+                  $req=$dbconnect->prepare("SELECT * FROM recettes r
+                                            INNER JOIN recettes_categories rc ON rc.Categorie = r.Categorie
+                                            WHERE r.Valide=1 ORDER BY ID ");
                   $req->execute();
                   $tab = $req->fetchAll();
 
@@ -83,8 +84,7 @@
                   <td><?php echo $recette['Titre']; ?></td>
                   <td><?php echo $recette['Description']; ?></td>
                   <td><?php echo $recette['Auteur']; ?></td>
-                  <td><?php echo $recette['Date_Creation']; ?></td>
-                  <td><?php echo $recette['Image']; ?></td>
+                  <td><?php echo $recette['Description']; ?></td>
                   <td><?php echo $recette['Archive']; ?></td>
                   <td>
                     <a href="recette_edit.php?ID=<?php echo $recette['ID']; ?>"> <i class="far fa-edit text-blue-500"> </i> </a>
