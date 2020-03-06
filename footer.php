@@ -39,7 +39,7 @@
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                             Se connecter
                         </button>
-                        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="signin/signin.php">
+                        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="signin.php">
                             Create Account ?
                         </a>
                     </div>
