@@ -13,8 +13,8 @@
 
     $host_name = 'localhost';
     $database = 'projet_web';
-    $user_name = 'root';
-    $password = 'root';
+    $user_name = 'admin';
+    $password = 'rollerblade';
     $dbconnect = null;
 
     try {

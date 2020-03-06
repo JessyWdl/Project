@@ -34,8 +34,18 @@
 
       <!-- Corps de page -->
       <div class="w-full h-screen bg-white">
-        Dashboards
+
+        <div class="mx-auto">
+
+          <div class="text-center text-3xl mb-8">
+            Bienvenue sur l'administration du site.
+          </div>
+
+        </div>
+
       </div>
+
+
     </div>
 
 

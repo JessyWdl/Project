@@ -12,7 +12,7 @@
 
 
     <!-- FORMULAIRE -->
-    <div class="mt-12">
+    <div class="mt-12 w-2/3 mx-auto">
 
       <form enctype="multipart/form-data" class="border border-gray-300 rounded-lg p-3" action="traitement/trt_add_recette.php" method="post">
 
@@ -20,6 +20,7 @@
           <label for="titre">Titre :</label>
           <input class="border border-gray-300" type="text" name="titre" value="">
         </div>
+
 
         <div class="mb-3">
           <label for="description">Description :</label>
@@ -42,7 +43,7 @@
           ?>
         </div>
 
-        <div class="">
+        <div class="mb-8">
           <button class="border border-gray-300 p-1 rounded-lg" type="submit" name="button">Ajouter</button>
         </div>
 

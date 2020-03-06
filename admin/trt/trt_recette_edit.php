@@ -26,7 +26,7 @@
       //On vérifie que l'adresse mail n'est pas déjà enregistrée dans la base:
       connect_Database();
 
-      $req = $dbconnect->prepare("UPDATE recettes SET Titre = '$titre', Descriprion = '$description',  Categorie = '$categorie', Date_Modification = now() WHERE ID = '$Recette_Id' ");
+      $req = $dbconnect->prepare("UPDATE recettes SET Titre = '$titre', Description = '$description',  Categorie = '$categorie', Date_Modification = now() WHERE ID = '$Recette_Id' ");
       $req -> execute();
       header ('Location: ../adm_recettes.php');
     }
