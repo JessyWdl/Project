@@ -6,7 +6,7 @@
 
 <body class="bg-gray-200 font-sans leading-normal tracking-normal">
 
-	<nav class="flex items-center justify-between flex-wrap bg-white p-1 fixed w-full z-10 top-0">
+	<nav class="flex items-center justify-between flex-wrap bg-white p-1 w-full z-10 top-0">
 		<div class="flex items-center flex-shrink-0 text-white mr-6">
 			<a class="text-white no-underline hover:text-white hover:no-underline" href="http://localhost/projetphp/Project/">    
         <span class=""><i class="em em-grinning"></i>
@@ -27,11 +27,8 @@
         <a class="inline-block py-1 px-4 text-black no-underline hover:text-blue-500 hover:text-underline" href="http://localhost/projetphp/Project/pagerecettes.php">Recettes</a>
       </li>
       <li class="mr-3">
-        <a class="inline-block py-1 px-4 text-black no-underline hover:text-blue-500 hover:text-underline" href="#">Ingrédients</a>
-      </li>
-      <li class="mr-3">
-        <div class="flex flex-row-reverse mr-6 my-2">
-          <div class="relative text-gray-600">
+        <div class="flex flex-row mr-6 my-2">
+          <div class="relative text-gray-600 pl-4">
           <input type="search" name="search" placeholder="Recherche..." class="bg-white  rounded-full text-lg focus:outline-none">
             <button type="submit" class="absolute right-0 top-0 ">
               <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
@@ -47,7 +44,7 @@
             }
             else{
           ?>
-          <div>                          
+          <div class="px-4">                          
               <button class="modal-open bg-transparent border border-gray-500 hover:border-blue-500 text-gray-500 hover:text-blue-500 font-bold py-2 px-4 rounded-full">Sign in</button>
           <?php
             }
